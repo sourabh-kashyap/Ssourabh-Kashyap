@@ -888,7 +888,7 @@ nav {
 <span class="stat-label">Projects Delivered</span>
 </div>
 <div class="stat">
-<span class="stat-num">10+</span>
+<span class="stat-num">13+</span>
 <span class="stat-label">Years Experience</span>
 </div>
 <div class="stat">
@@ -1158,5 +1158,28 @@ nav {
       observer.observe(el);
     });
   </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const counters = document.querySelectorAll('.stat-num');
+  counters.forEach(counter => {
+    const text = counter.innerText;
+    const target = parseInt(text.replace(/[^0-9]/g, ''));
+    const suffix = text.replace(/[0-9]/g, '');
+
+    let count = 0;
+    const increment = target / 50;
+
+    const step = () => {
+      count += increment;
+      if(count < target){
+        counter.innerText = Math.ceil(count) + suffix;
+        requestAnimationFrame(step);
+      } else {
+        counter.innerText = target + suffix;
+      }
+    };
+    step();
+  });
+});
+</script></body>
 </html>
