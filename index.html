@@ -760,6 +760,76 @@
   100% { transform: translateX(-50%); }
 }
 #partners { overflow: hidden; }
+
+
+/* HEADER LOGO SIZE */
+.nav-logo img {
+  height: 95px;
+  width: auto;
+}
+
+/* LOGO TEXT STYLE LIKE NAV LINKS */
+.nav-logo-text span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.nav-logo-text span:hover {
+  color: var(--accent);
+}
+
+/* REMOVE UNDERLINE EFFECT */
+.nav-logo-text span::after {
+  display: none !important;
+}
+
+
+/* UPDATED LOGO SIZE */
+.nav-logo img {
+  height: 110px; /* increased */
+  width: auto;
+}
+
+/* UPDATED BRAND TEXT SIZE */
+.nav-logo-text span {
+  font-size: 1.1rem; /* increased */
+  font-weight: 700;
+}
+
+
+/* FIX NAV HEIGHT TO MATCH BIG LOGO */
+nav {
+  height: 120px; /* increased from 90px */
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* KEEP LOGO PROPERLY ALIGNED */
+.nav-logo img {
+  height: 100px; /* slightly reduced to fit */
+}
+
+/* ALIGN ITEMS CENTER */
+.nav-logo, .nav-right {
+  align-items: center;
+}
+
+
+/* Slightly reduce navbar height */
+nav {
+  height: 110px; /* reduced from 120px */
+}
+
+/* Footer logo bigger */
+.footer-logo img {
+  height: 70px; /* increased */
+}
+
+/* Footer brand text bigger */
+.footer-brand-name {
+  font-size: 1rem; /* increased */
+}
 </style>
 <style>
 @keyframes scroll {
